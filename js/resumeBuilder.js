@@ -10,7 +10,12 @@ $("#header").prepend(formattedName);
 var bio = {
 	"name" : "Brian",
 	"role" : "Web Developer",
-	"contact" : "matosb02@gmail.com",
+	"contacts" : {
+		"mobile" : "201-207-8207",
+		"email" : "matosb02@gmail.com",
+		"github" : "https://github.com/matosb2",
+		"location" : "Kearny, New Jersey"
+},
 	"bioPic" : "images/fry.jpg",
 	"welcome" : "Hello, My name is brian and I'm looking forward to this course.",
 	"skills" : ["Microsoft Office ", "HTML & CSS ", "JavaScript & JSON "]
