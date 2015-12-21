@@ -46,7 +46,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -120,7 +120,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('header').style.backgroundColor = 'black';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.backgroundColor = 'white';
+      document.getElementById('workExperience').style.backgroundColor = 'black';
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.backgroundColor = 'black';
@@ -133,31 +133,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.backgroundColor = 'black';
-    }
-    if (bio.skills.length > 0) {
-      $("#header").append(HTMLskillsStart);
-
-      var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-      $("#skills").append(formattedSkill);
-      formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
-      $("#skills").append(formattedSkill);
-      formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
-      $("#skills").append(formattedSkill)
-
-      for (job in work.jobs){
-        $("#workExperience").append(HTMLworkStart);
-
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        var formattedEmployerTitle = formattedEmployer + formattedTitle;
-        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-        $(".work-entry:last").append(formattedEmployerTitle);
-        $(".work-entry:last").append(formattedLocation);
-        $(".work-entry:last").append(formattedDates);
-        $(".work-entry:last").append(formattedDescription);
-      }
     }
   </script>
 </body>
