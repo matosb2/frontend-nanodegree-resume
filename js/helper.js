@@ -89,7 +89,10 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+  logClicks(x,y);
 });
 
 
@@ -111,6 +114,7 @@ function initializeMap() {
 
   var mapOptions = {
     disableDefaultUI: true
+    
   };
 
   /* 
@@ -210,7 +214,8 @@ function initializeMap() {
 
     // Iterates through the array of locations, creates a search object for each location
     for (var place in locations) {
-
+      if (!locations[place])
+        continue;
       // the search request object
       var request = {
         query: locations[place]
