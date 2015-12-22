@@ -94,7 +94,7 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 15px;
   color: #f3f3f3;
   line-height: 28px;
 }
@@ -168,6 +168,11 @@ span {
   text-align: center;
 }
 
+body {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -211,4 +216,8 @@ span {
   .biopic {
     display: block;
   }
+}
+
+#role {
+  color: #2372f5;
 }
