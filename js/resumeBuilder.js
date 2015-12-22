@@ -8,7 +8,7 @@ var bio = {
         "location": "Kearny, New Jersey"
     },
     "bioPic": "images/me1.jpg",
-    "welcome": "Hello, My name is brian and I'm looking forward to this course.",
+    "welcome": "Hello there!!  I'm a new and enthusiastic web developer joining the scene in an ambitious fashion.  I look forward to becoming a part of projects that can use a helping hand.  I try my best in anything do and am a bit competitive so I don't lose motivation because I have the world to compete with and I don't want to fall behind!  I Look forward to speaking to you soon.",
     "skills": ["Microsoft Office ", "HTML & CSS ", "JavaScript & JSON "]
 };
 
@@ -18,13 +18,13 @@ var work = {
         "title": "Compliance Representative/Billing Specialist",
         "location": "New York, NY",
         "dates": "2013-2015",
-        "description": "Managed customer transactions and documents through merchant applications, CRM, and Fulfillment"
+        "description": "Managed customer transactions and documents through merchant applications, CRM, and Fulfillment.  Worked daily with clients via phone to guide them and complete necessary legal documents."
     }, {
         "employer": "Marketing Solutions Group",
         "title": "Billing Specialist",
         "location": "New York, NY",
         "dates": "2015-2015",
-        "description": "Responsible for client billing and analyzing statements, and tracked and recorded all data management"
+        "description": "Responsible for client billing and analyzing statements, and tracked and recorded all data management.  Trained new emplyees to company's standard and also created fixed schedule for sales department in company."
     }]
 }
 
@@ -43,7 +43,7 @@ var education = {
         "years": "-2013"
     }],
     "onlineCourses": [{
-        "title": ["Javascript Syntax", "Intro to HTML and CSS", "How to Use Git and GitHub", "Linux Command Line Basics"],
+        "title": ["Javascript Syntax", "Intro to HTML and CSS", "How to Use Git and GitHub", "Linux Command Line Basics, Front-End Web Developer Nanodegree"],
         "school": "Udacity",
         "dates": "2015-",
         "url": "www.udacity.com"
@@ -54,7 +54,7 @@ var myprojects = {
     "projects": [{
         "title": "Building a Portfolio Site",
         "dates": "10/23/2015-11/23/2015",
-        "description": "First project after learning basic HTML & CSS, where I learned and built a responsive Portfolio Website",
+        "description": "First project after learning basic HTML & CSS, where I learned and built a responsive Portfolio Website.  This was also a website mockup that was completed to course's standards",
         "url": "https://github.com/matosb2/P1.git",
         "images": ["images/project.jpg"]
     }]
