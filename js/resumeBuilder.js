@@ -35,6 +35,7 @@ bio.display = function() {
     $("#topContacts").append(formattedLocation);
     $("#footerContacts").append(formattedMobile);
     $("#footerContacts").append(formattedEmail);
+    $("#footerContacts").append(formattedTwitter);
     $("#footerContacts").append(formattedGithub);
     $("#footerContacts").append(formattedLocation);
     if (bio.skills.length > 0) {
