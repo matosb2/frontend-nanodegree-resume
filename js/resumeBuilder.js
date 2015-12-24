@@ -44,9 +44,9 @@ bio.display = function() {
         formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
         $("#skills").append(formattedSkill);
         formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-        $("#skills").append(formattedSkill)
+        $("#skills").append(formattedSkill);
     }
-}
+};
 
 bio.display();
 
@@ -64,23 +64,23 @@ var work = {
         "dates": "2015-2015",
         "description": "Responsible for client billing and analyzing statements, and tracked and recorded all data management.  Trained new emplyees to company's standard and also created fixed schedule for sales department in company."
     }]
-}
+};
 
 work.display = function() {
     $("#workExperience").append(HTMLworkStart);
-    for (job in work.jobs) {
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    for (var i = 0; i < work.jobs.length; i++) {
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
         var formattedEmployerTitle = formattedEmployer + formattedTitle;
-        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
         $(".work-entry:last").append(formattedEmployerTitle);
         $(".work-entry:last").append(formattedLocation);
         $(".work-entry:last").append(formattedDates);
         $(".work-entry:last").append(formattedDescription);
     }
-}
+};
 
 work.display();
 
@@ -106,7 +106,7 @@ var education = {
         "date": 2015,
         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }]
-}
+};
 
 education.display = function() {
     $("#education").append(HTMLschoolStart);
@@ -116,17 +116,15 @@ education.display = function() {
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
         var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
         var formattedDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
-        var formattedUrl = HTMLschoolDates.replace("%data%", education.schools[i].url);
         $(".education-entry:last").append(formattedName);
         $(".education-entry:last").append(formattedLocation);
         $(".education-entry:last").append(formattedDegree);
         $(".education-entry:last").append(formattedMajor);
         $(".education-entry:last").append(formattedDates);
-        //$(".education-entry:last").append(formattedUrl);
     }
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLschoolStart);
-    for (var i = 0; i < education.onlineCourses.length; i++) {
+    for (i = 0; i < education.onlineCourses.length; i++) {
         var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
         var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
         var formattedonlineDate = HTMLonlineDates.replace("%data%", education.onlineCourses[i].date);
@@ -136,7 +134,8 @@ education.display = function() {
         $(".education-entry:last").append(formattedonlineDate);
         $(".education-entry:last").append(formattedonlineURL);
     }
-}
+};
+
 education.display();
 
 var projects = {
@@ -147,9 +146,9 @@ var projects = {
         "url": "https://github.com/matosb2/P1.git",
         "images": ["images/project.jpg"]
     }]
-}
+};
 
-projects.display = function () {
+projects.display = function() {
     $("#projects").append(HTMLprojectStart);
     for (var i = 0; i < projects.projects.length; i++) {
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
@@ -160,8 +159,9 @@ projects.display = function () {
         $(".project-entry:last").append(formattedDates);
         $(".project-entry:last").append(formattedDescription);
         $(".project-entry:last").append(formattedImage);
-    };
+    }
 };
+
 projects.display();
 
 $("#mapDiv").append(googleMap);
